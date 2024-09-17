@@ -7,7 +7,7 @@ from main.services import crear_inmueble
 
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
-        archivo = open('data/inmuebles.csv', 'r')
+        archivo = open('data/inmuebles.csv', 'r', encoding='utf-8')
         reader = csv.reader(archivo, delimiter=',')
         next(reader) # Se salta la primera linea
         for fila in reader:
