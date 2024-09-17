@@ -7,7 +7,7 @@ from main.services import crear_user
 
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
-        archivo = open('data/users.csv', 'r')
+        archivo = open('data/users.csv', 'r', encoding='utf-8')
         reader = csv.reader(archivo, delimiter=';')
         next(reader) # Se salta la primera linea
         for fila in reader:
