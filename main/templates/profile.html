@@ -5,12 +5,19 @@
 	<div class="row">
 		<div class="col-4">
 			<h4 class="text-center">Cambia tu contraseña</h4>
-			<form action="{% url 'profile' %}" method="post">
+			<form action="{% url 'change_pass' %}" method="post">
 				{% csrf_token %}
 				<div class="mb-3">
 					<label class="form-label">Ingrese nueva contraseña:</label>
-					.....
-                </div>
+					<input
+							id=""
+							type="password"
+							class="form-control"
+							name="password"
+							placeholder="*******"
+							required
+					>
+				</div>
 				<div class="mb-3">
 					<label class="form-label">Repita nueva contraseña:</label>
 					<input

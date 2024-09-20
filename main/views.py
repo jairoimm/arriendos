@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from main.services import crear_user, editar_user_sin_password
+from main.services import crear_user, editar_user_sin_password, cambio_password
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from main.models import Inmueble
@@ -75,3 +75,11 @@ def profile(request):
             return redirect('/accounts/profile')
     else:
         return render(request, 'profile.html', context)
+    
+
+
+def change_pass(request):
+    password = request.POST['password']
+    password_repeat = request.POST['password_repeat']
+    cambio_password(request, password, password_repeat)
+    return redirect('/accounts/profile')
