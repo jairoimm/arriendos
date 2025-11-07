@@ -31,10 +31,10 @@ El sistema está diseñado para facilitar la administración de inmuebles, usuar
 2 Crear entorno virtual
 
 python -m venv venv
-# Activar el entorno virtual
-# En Windows:
+Activar el entorno virtual
+En Windows:
 venv\Scripts\activate
-# En macOS / Linux:
+En macOS / Linux:
 source venv/bin/activate
 
 3 instalar dependencias
